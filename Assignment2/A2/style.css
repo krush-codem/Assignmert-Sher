@@ -1,0 +1,312 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0b0b0c;
+  color: #e3e4e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.dashboard-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.main-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.brand-title {
+  font-size: 46px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.divider-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.divider-icon .line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b36b22, transparent);
+}
+
+.divider-icon .logo-mark {
+  color: #d97706;
+  font-size: 11px;
+}
+
+.grid-section {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.drink-card {
+  position: relative;
+  flex: 1;
+  background: linear-gradient(145deg, #161619, #0f0f11);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 30px 20px 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drink-card.active {
+  border: 1px solid #c26d24;
+  box-shadow: 0 0 25px rgba(194, 109, 36, 0.15);
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.badge.signature {
+  background-color: rgba(217, 119, 6, 0.15);
+  border: 1px solid rgba(217, 119, 6, 0.4);
+  color: #f59e0b;
+}
+
+.badge.new {
+  background-color: rgba(224, 130, 68, 0.15);
+  border: 1px solid rgba(224, 130, 68, 0.3);
+  color: #e08244;
+}
+
+.badge .dot {
+  width: 5px;
+  height: 5px;
+  background-color: #e08244;
+  border-radius: 50%;
+}
+
+.image-container {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  position: absolute;
+  background-size: cover;
+  pointer-events: none;
+}
+
+.crop-drink-1 {
+  height: 100%;
+  width: 100%;
+}
+.crop-drink-2 {
+  height: 100%;
+  width: 100%;
+}
+.crop-drink-3 {
+  height: 100%;
+  width: 100%;
+}
+.crop-drink-4 {
+  height: 100%;
+  width: 100%;
+}
+
+.drink-title {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.drink-tagline {
+  font-size: 12px;
+  color: #8a8d93;
+  margin-bottom: 22px;
+}
+
+.drink-price {
+  font-size: 18px;
+  color: #e08244;
+  margin-top: auto;
+}
+
+.special-showcase {
+  position: relative;
+  background-color: #161619;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 45px 50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  overflow: hidden;
+}
+
+.special-image-container {
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.crop-food {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.special-content {
+  max-width: 580px;
+  z-index: 2;
+}
+
+.sub-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e08244;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.special-title {
+  font-size: 34px;
+  color: #ffffff;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.special-tagline {
+  font-size: 14px;
+  color: #b0b3b8;
+  margin-bottom: 18px;
+}
+
+.special-description {
+  font-size: 13px;
+  color: #71747a;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(224, 130, 68, 0.4);
+  color: #e08244;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 10px 24px;
+  border-radius: 30px;
+}
+
+.cta-button:hover {
+  background-color: #e08244;
+  color: #ffffff;
+}
+
+.cta-button .arrow {
+  font-size: 14px;
+}
+
+.decorative-leaves {
+  position: absolute;
+  right: 30px;
+  bottom: -10px;
+  font-size: 180px;
+  color: rgba(224, 130, 68, 0.03);
+  user-select: none;
+  transform: rotate(-15deg);
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 25px;
+  margin-top: 10px;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: #61646a;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-nav a {
+  color: #92959c;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-nav a:hover {
+  color: #ffffff;
+}
+
+.footer-nav .bullet {
+  color: #e08244;
+  font-size: 8px;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.follow-text {
+  font-size: 12px;
+  color: #61646a;
+  margin-right: 4px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #92959c;
+  font-size: 11px;
+}

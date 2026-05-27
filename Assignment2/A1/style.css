@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  min-width: 1024px;
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  width: 50%;
+  height: 100%;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-section {
+  background-color: #ffffff;
+  color: #1a2b23;
+  position: relative;
+}
+
+.right-section {
+  background-color: #b83227;
+  color: #ffffff;
+  padding-left: 120px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f1f2f6;
+  border-radius: 20px;
+  padding: 8px 16px;
+  width: 220px;
+}
+
+.search-icon {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-right: 8px;
+}
+
+.search-bar input {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.vertical-title {
+  position: absolute;
+  left: 40px;
+  bottom: 120px;
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  font-style: italic;
+  font-size: 48px;
+  color: #1a2b23;
+  white-space: nowrap;
+}
+
+.classification-list {
+  margin-top: auto;
+  margin-bottom: 60px;
+  margin-left: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border-bottom: 1px solid #e1e8ed;
+  padding-bottom: 12px;
+  width: 220px;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  background-color: #b83227;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.value {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 2px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.product-details {
+  margin-top: auto;
+  margin-bottom: 60px;
+  max-width: 400px;
+}
+
+.product-title {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.specs-grid {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.spec-graphic {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  padding-right: 30px;
+}
+
+.insect-icon {
+  font-size: 36px;
+  text-align: center;
+}
+
+.size-text {
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.spec-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.info-item .icon {
+  font-size: 16px;
+}
+
+.meta-label {
+  margin-right: 4px;
+}
+
+.price {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.toggle-container input {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  margin-right: 12px;
+}
+
+.toggle-label {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.add-to-collection {
+  background-color: #d1b79a;
+  color: #1a2b23;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.add-to-collection:hover {
+  background-color: #c4a685;
+}
+
+.display-dome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.display-dome img {
+  height: 75vh;
+  display: block;
+  mix-blend-mode: multiply;
+}
