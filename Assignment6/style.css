@@ -1,0 +1,1100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+main {
+  width: 100%;
+  min-height: 100vh; /* min height is used for giving minimum height to element*/
+  background-color: #fbf9eb;
+}
+
+nav {
+  width: 100%;
+  background-color: #fffefb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Reckless;
+  padding: 0.8rem 1rem;
+  font-size: 0.8rem;
+  position: sticky;
+}
+nav i {
+  font-size: 2rem;
+  width: 33%;
+}
+nav .nav-part-1 {
+  display: flex;
+  gap: 1rem;
+  width: 33%;
+  display: none;
+}
+.nav-part-1 h3 {
+  font-weight: 300;
+}
+
+nav .nav-part-2 {
+  width: 20%;
+  height: auto;
+  display: flex;
+}
+
+.nav-part-2 img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.nav-part-3 {
+  display: flex;
+  width: 30%;
+  gap: 2rem;
+  align-items: center;
+  justify-content: end;
+}
+
+.nav-part-3 h3 {
+  font-weight: 300;
+  display: none;
+}
+
+.nav-part-3 svg {
+  width: 30px;
+  height: 30px;
+}
+
+#section-1 {
+  width: 100%;
+  height: 85vh;
+  background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry_mobile.webp?v=1774284087&width=720);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  padding: 3rem 0.5rem;
+  gap: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+
+#section-1 h1 {
+  font-size: clamp(3.5rem, 5vw, 5rem);
+  font-family: Reckless;
+  color: white;
+  font-weight: 500;
+}
+
+#section-1 p {
+  font-size: clamp(1.2rem, 1vw, 1rem);
+  font-family: Figtree;
+  font-weight: 400;
+  color: white;
+}
+
+#section-1 button {
+  padding: 1.2rem;
+  border: none;
+  background-color: #2a2857;
+  color: white;
+  font-family: Figtree;
+  border-radius: 1.2rem;
+  font-size: 1.1rem;
+}
+
+#section-2 {
+  width: 100%;
+  height: 100vh;
+  padding: 8rem 1rem;
+}
+
+#section-2 .section2-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Reckless;
+  text-align: center;
+}
+
+.section2-text h1 {
+  font-size: clamp(2.2rem, 8vw, 6rem);
+  font-weight: 300;
+  width: 80%;
+}
+
+#section-2 .btn-1 {
+  padding: 0.1rem 0.5rem;
+  font-size: 3rem;
+  font-family: Midnight;
+  font-weight: 600;
+  background-color: #daaeea;
+  border-radius: 1.2rem;
+  text-transform: uppercase;
+  margin-top: 5rem;
+  rotate: -5deg;
+  letter-spacing: 2px;
+}
+
+#section-2 .card-container {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  overflow-x: auto;
+}
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+.card-top {
+  width: 90%;
+  height: 49vh;
+  background-color: #c1ee91;
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  border-radius: 1rem;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.card-top-text {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.card-top-text button {
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid #000;
+  background-color: #fff;
+  font-family: Midnight;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  display: block;
+
+  font-weight: 400;
+}
+.card-top-text span {
+  font-size: 1.2rem;
+  font-family: Reckless;
+}
+.card-top img {
+  height: 100%;
+  width: 80%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  transition: all ease 0.3s;
+}
+
+.card-btm-text {
+  background-color: #fff;
+  padding: 0.6rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3rem;
+  font-family: Reckless;
+  font-size: 1.2rem;
+}
+
+.card-top:hover img {
+  scale: 1.1;
+}
+
+.card-btm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-family: Reckless;
+  align-items: start;
+}
+
+.card-btm h1 {
+  font-family: 0.3rem;
+  font-weight: 100;
+}
+
+.card-btm h3 {
+  font-family: 0.3rem;
+  font-weight: 100;
+}
+.card-btm p {
+  font-weight: 100;
+  opacity: 0.5;
+  width: 90%;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btm-btn {
+  padding: 1.2rem;
+  border: none;
+  background-color: #2a2857;
+  color: white;
+  font-family: Figtree;
+  border-radius: 1.2rem;
+  font-size: 1.1rem;
+}
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+  nav {
+    width: 100%;
+    background-color: #fffefb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Reckless;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    position: sticky;
+  }
+  nav .nav-part-1 {
+    display: flex;
+    gap: 1rem;
+    width: 30%;
+  }
+  nav i {
+    display: none;
+  }
+
+  .nav-part-1 h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  nav .nav-part-2 {
+    width: 5%;
+
+    display: flex;
+  }
+  .nav-part-3 {
+    display: flex;
+    width: 40%;
+    gap: 1rem;
+    justify-content: end;
+    align-items: end;
+  }
+  .nav-part-3 h3 {
+    font-weight: 300;
+    display: block;
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+
+  #section-1 {
+    width: 100%;
+    text-align: start;
+    padding: 3rem 2rem;
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=2250.0);
+    background-size: cover;
+  }
+
+  #section-1 h1 {
+    width: 20%;
+  }
+  #section-1 p {
+    width: 20%;
+  }
+
+  #section-1 button {
+    width: fit-content;
+    padding: 1rem 4rem;
+    border-radius: 1.2rem;
+  }
+
+  #section-2 .btn-1 {
+    display: none;
+  }
+  .section2-text h1 {
+    width: 50%;
+  }
+  .card-container {
+    margin-top: 8rem;
+  }
+}
+
+#section-3 {
+  width: 100%;
+  background-color: #f0ede0;
+  margin-top: 40rem;
+  padding: 4rem 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.section3-inner {
+  max-width: 9000px;
+  margin: 0 auto;
+}
+.discover-label {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  width: 250px;
+  color: #000000;
+  margin-bottom: 1rem;
+  border: #000 solid 3px;
+  border-radius: 0.5rem;
+  transform: rotate(-3deg);
+  background-color: rgb(234, 105, 12);
+  text-align: center;
+}
+#section-3 h2 {
+  font-family: Reckless;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 4rem;
+}
+#section-3 h2 em {
+  font-style: italic;
+  font-weight: 300;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  background-color: white;
+  border: 1.5px solid #201c1a;
+  border-radius: 0.5rem;
+  padding: 1.25rem 4rem 1.25rem 1.25rem;
+  margin-bottom: 4rem;
+  max-width: 500px;
+}
+.search-bar i {
+  font-size: 1.25rem;
+  opacity: 0.5;
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  font-family: Figtree;
+  font-size: 2rem;
+  background: transparent;
+  width: 100%;
+}
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.tag-cloud span {
+  padding: 0.6875rem 1.25rem;
+  border: 0.0625rem solid black;
+  border-radius: 1rem;
+  font-family: Figtree;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background-color: #7cafed;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.tag-cloud span:hover {
+  background-color: #201c1a;
+  color: white;
+}
+
+#section-4 {
+  width: 100%;
+  min-height: 100vh;
+  height: 2000px;
+  background-image: url("https://www.twoleavestea.com/cdn/shop/files/adam-vradenburg-_gu7E90QChU-unsplash_1_1.webp?v=1771592855&width=1200");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 3rem 1.5rem;
+}
+
+.origins-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+.origins-label {
+  font-family: Figtree;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+.origins-title {
+  font-family: Reckless;
+  font-size: clamp(3.5rem, 12vw, 9rem);
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.origins-text {
+  font-family: Figtree;
+  font-size: 1rem;
+  max-width: 400px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+#section-5 {
+  width: 100%;
+  padding: 5rem 1.5rem;
+  background-color: #fbf9eb;
+  border-top: 1px solid rgba(17, 217, 77, 0.1);
+}
+.reviews-label {
+  width: 200px;
+  background-color: rgb(17, 219, 17);
+  text-align: center;
+  font-family: Figtree;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #2a2857;
+  margin-bottom: 1rem;
+  border: 2px solid #2a2857;
+  border-radius: 0.2rem;
+  margin-left: 9rem;
+}
+#section-5 h2 {
+  font-family: Reckless;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.3;
+  margin-left: 7rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+.reviews-container {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+.reviews-container::-webkit-scrollbar {
+  display: none;
+}
+.review-card {
+  height: 350px;
+  width: 70vw;
+  padding: 1.5rem;
+  flex-shrink: 0;
+  max-width: 280px;
+  border: 2px solid rgba(21, 4, 4, 0.837);
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+  scroll-snap-align: start;
+}
+
+.review-card p {
+  font-family: Reckless;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.6;
+  font-style: italic;
+  text-align: center;
+}
+.review-card span {
+  font-family: Figtree;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.7;
+  text-align: end;
+}
+
+#section-6 {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cafe-text-side {
+  padding: 3rem 1.5rem;
+  background-color: #2a2857;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.cafe-label {
+  font-family: Figtree;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: 0.7;
+}
+.cafe-text-side h2 {
+  font-family: Reckless;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.3;
+}
+.cafe-text-side p {
+  font-family: Figtree;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+.cafe-text-side button {
+  padding: 1rem 2rem;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-family: Figtree;
+  border-radius: 2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  width: fit-content;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.cafe-text-side button:hover {
+  background: white;
+  color: #2a2857;
+}
+
+#section-7 {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ── TOP BAND (dark brown) ── */
+.barista-header {
+  background-color: #7a4f2e;
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+}
+
+.barista-label {
+  display: inline-block;
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.18rem 0.7rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.barista-title {
+  font-family: "Figtree", sans-serif;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.05;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.barista-sub {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ── BOTTOM BAND (light peach) ── */
+.barista-cards {
+  background-color: #f5ddb8;
+}
+
+.latte-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+  gap: 2.5rem;
+}
+
+.latte-img-wrap {
+  flex: 0 0 340px;
+  position: relative;
+  margin-top: -100px;
+}
+
+.latte-img {
+  width: 900px;
+  height: 700px;
+  display: block;
+  object-fit: cover;
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.18));
+}
+
+.latte-info {
+  flex: 1;
+  padding-top: 1.5rem;
+}
+
+.latte-badge {
+  display: inline-block;
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #201c1a;
+  border: 2px solid #201c1a;
+  padding: 0.18rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+}
+
+.latte-info h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: #201c1a;
+  line-height: 1.15;
+  margin-bottom: 0.8rem;
+}
+
+.latte-info p {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.9rem;
+  color: #4a3a2a;
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+  max-width: 280px;
+}
+
+.latte-info button {
+  padding: 0.75rem 2rem;
+  border: 1.5px solid #201c1a;
+  background: white;
+  font-family: "Figtree", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: #201c1a;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.latte-info button:hover {
+  background: #201c1a;
+  color: white;
+}
+
+#section-8 {
+  width: 100%;
+  padding: 5rem 1.5rem;
+  background-color: #fbf9eb;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.journal-header {
+  margin-bottom: 3rem;
+}
+.journal-label {
+  font-family: Figtree;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #2a2857;
+  margin-bottom: 1rem;
+}
+#section-8 h2 {
+  font-family: Reckless;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.3;
+  max-width: 600px;
+}
+#section-8 h2 em {
+  font-style: italic;
+  font-weight: 300;
+}
+.journal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.journal-card {
+  background: rgb(62, 118, 186);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.journal-card:hover {
+  transform: translateY(-4px);
+}
+.journal-img {
+  background-image: url("https://www.twoleavestea.com/cdn/shop/articles/mountain-high-chai-naked-tea-pour_bc4facfe-d769-467b-9d98-1ca8bc3c10a5.svg?v=1775656147&width=750.0");
+  background-size: cover;
+}
+.journal-text {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.journal-tag {
+  font-family: Figtree;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: #2a2857;
+}
+.journal-text h3 {
+  font-family: Reckless;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.journal-text p {
+  font-family: Figtree;
+  font-size: 0.75rem;
+  opacity: 0.55;
+  line-height: 1.5;
+  display: none;
+}
+
+#section-9 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://www.twoleavestea.com/cdn/shop/files/Two_Leaves_Tea_Aug_25_Shoot-14x_SQ_1_d549e6bb-f1ad-4b36-a851-05e1af195a31.webp?v=1771593222&width=2250.0");
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.great-tea-left {
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.great-tea-left h2 {
+  font-family: Reckless;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.great-tea-left button {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #2a2857;
+  color: white;
+  font-family: Figtree;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: fit-content;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.great-tea-left button:hover {
+  background: #1e1c45;
+  transform: translateY(-2px);
+}
+.great-tea-right {
+  width: 100%;
+  height: 40vh;
+}
+.great-tea-img-placeholder {
+  width: 100%;
+  height: 100%;
+  /* replace with your own image */
+  background: linear-gradient(135deg, #c1ee91 0%, #8cc88c 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+#section-10 {
+  width: 100%;
+  background-color: #3b64ab;
+  color: white;
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  text-align: center;
+}
+#section-10 h2 {
+  font-family: Reckless;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 400;
+}
+#section-10 p {
+  font-family: Figtree;
+  font-size: 1rem;
+  opacity: 0.8;
+  max-width: 480px;
+  line-height: 1.6;
+}
+.email-form {
+  display: flex;
+  gap: 0.8rem;
+  width: 100%;
+  max-width: 480px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.email-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.9rem 1.2rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 2rem;
+  font-family: Figtree;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.email-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.email-form input:focus {
+  border-color: white;
+}
+.email-form button {
+  padding: 0.9rem 1.8rem;
+  border: none;
+  background: #c1ee91;
+  color: #201c1a;
+  font-family: Figtree;
+  font-weight: 700;
+  border-radius: 2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.email-form button:hover {
+  opacity: 0.85;
+}
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.social-links i {
+  font-size: 1.8rem;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.social-links i:hover {
+  opacity: 1;
+}
+
+footer {
+  width: 100%;
+  background-color: #3b64ab;
+  color: white;
+  padding: 3rem 1.5rem 2rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.footer-col h4 {
+  font-family: Figtree;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.footer-col ul li {
+  font-family: Figtree;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.footer-col ul li:hover {
+  opacity: 1;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(8, 9, 10, 0.529);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+.footer-logo img {
+  width: 140px;
+  filter: invert(1) brightness(2);
+  opacity: 0.9;
+}
+.tree-row {
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  margin-bottom: 0.5rem;
+}
+.footer-tagline p {
+  font-family: Figtree;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+.footer-sub {
+  margin-top: 0.4rem;
+  font-size: 0.72rem !important;
+}
+
+@media (min-width: 768px) {
+  .review-card {
+    width: 45vw;
+    max-width: 280px;
+  }
+  .journal-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .journal-img {
+    height: 160px;
+  }
+  .journal-text p {
+    display: block;
+  }
+  #section-6 {
+    flex-direction: row;
+  }
+  .cafe-img-side {
+    width: 54%;
+    height: auto;
+  }
+  .cafe-text-side {
+    width: 50%;
+  }
+  #section-9 {
+    flex-direction: row;
+  }
+  .great-tea-left {
+    width: 50%;
+    justify-content: center;
+  }
+  .great-tea-right {
+    width: 50%;
+    height: auto;
+    min-height: 400px;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  #section-3 {
+    padding: 6rem 4rem;
+  }
+  #section-4 {
+    min-height: 80vh;
+    padding: 4rem 4rem;
+  }
+  #section-5 {
+    padding: 6rem 4rem;
+  }
+  .review-card {
+    width: 22vw;
+    max-width: 280px;
+  }
+  #section-6 {
+    flex-direction: row;
+  }
+  .cafe-text-side {
+    width: 45%;
+    justify-content: center;
+    padding: 4rem 3rem;
+  }
+
+  #section-8 {
+    padding: 6rem 4rem;
+  }
+  .journal-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  .journal-img {
+    height: 200px;
+  }
+  .journal-text p {
+    display: block;
+  }
+  #section-9 {
+    flex-direction: row;
+  }
+  .great-tea-left {
+    width: 45%;
+    padding: 5rem 4rem;
+  }
+  .great-tea-right {
+    width: 55%;
+    min-height: 500px;
+  }
+  #section-10 {
+    padding: 6rem 4rem;
+  }
+  footer {
+    padding: 4rem 4rem 2rem;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
