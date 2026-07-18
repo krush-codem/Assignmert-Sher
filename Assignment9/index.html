@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Background Overlay -->
+    <div class="overlay"></div>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+      <div class="logo">
+        <i class="fa-solid fa-chart-line"></i>
+        <h1>Productivity Dashboard</h1>
+      </div>
+
+      <div class="header-right">
+        <div class="datetime">
+          <div id="currentDate">Thursday, July 9</div>
+
+          <div id="currentTime">08:00 PM</div>
+        </div>
+
+        <button id="themeToggle">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- ================ DASHBOARD ================ -->
+
+    <main id="dashboard">
+      <div class="dashboard-grid">
+        <!-- Todo -->
+
+        <div class="dashboard-card" data-page="todo">
+          <i class="fa-solid fa-list-check"></i>
+
+          <h2>Todo List</h2>
+
+          <p>Manage your daily tasks.</p>
+        </div>
+
+        <!-- Planner -->
+
+        <div class="dashboard-card" data-page="planner">
+          <i class="fa-solid fa-calendar-days"></i>
+
+          <h2>Daily Planner</h2>
+
+          <p>Plan your day hour by hour.</p>
+        </div>
+
+        <!-- Pomodoro -->
+
+        <div class="dashboard-card" data-page="pomodoro">
+          <i class="fa-solid fa-clock"></i>
+
+          <h2>Pomodoro Timer</h2>
+
+          <p>Stay focused while working.</p>
+        </div>
+
+        <!-- Quotes -->
+
+        <div class="dashboard-card" data-page="quotes">
+          <i class="fa-solid fa-quote-left"></i>
+
+          <h2>Motivation Quotes</h2>
+
+          <p>Get inspired every day.</p>
+        </div>
+
+        <!-- Weather -->
+
+        <div class="dashboard-card" data-page="weather">
+          <i class="fa-solid fa-cloud-sun"></i>
+
+          <h2>Weather</h2>
+
+          <p>Check today's weather.</p>
+        </div>
+
+        <!-- Goals -->
+
+        <div class="dashboard-card" data-page="goals">
+          <i class="fa-solid fa-bullseye"></i>
+
+          <h2>Daily Goals</h2>
+
+          <p>Track your daily progress.</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- =============== FEATURE CONTAINER =============== -->
+
+    <section id="featurePage">
+      <button id="backBtn">
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back to Dashboard
+      </button>
+
+      <div id="featureContent">
+        <!-- ================= TODO LIST ================= -->
+
+        <section id="todo" class="feature">
+          <h2>
+            <i class="fa-solid fa-list-check"></i>
+            Todo List
+          </h2>
+
+          <div class="input-group">
+            <input type="text" id="todoInput" placeholder="Enter a task" />
+
+            <button id="addTodo">Add Task</button>
+          </div>
+
+          <ul id="todoList"></ul>
+        </section>
+
+        <!-- ================= DAILY PLANNER ================= -->
+
+        <section id="planner" class="feature">
+          <h2>
+            <i class="fa-solid fa-calendar-days"></i>
+            Daily Planner
+          </h2>
+
+          <div class="planner-container">
+            <div class="planner-row">
+              <span>06:00 AM</span>
+              <input type="text" class="planner-input" data-time="06:00 AM" />
+            </div>
+
+            <div class="planner-row">
+              <span>08:00 AM</span>
+              <input type="text" class="planner-input" data-time="08:00 AM" />
+            </div>
+
+            <div class="planner-row">
+              <span>10:00 AM</span>
+              <input type="text" class="planner-input" data-time="10:00 AM" />
+            </div>
+
+            <div class="planner-row">
+              <span>12:00 PM</span>
+              <input type="text" class="planner-input" data-time="12:00 PM" />
+            </div>
+
+            <div class="planner-row">
+              <span>02:00 PM</span>
+              <input type="text" class="planner-input" data-time="02:00 PM" />
+            </div>
+
+            <div class="planner-row">
+              <span>04:00 PM</span>
+              <input type="text" class="planner-input" data-time="04:00 PM" />
+            </div>
+
+            <div class="planner-row">
+              <span>06:00 PM</span>
+              <input type="text" class="planner-input" data-time="06:00 PM" />
+            </div>
+
+            <div class="planner-row">
+              <span>08:00 PM</span>
+              <input type="text" class="planner-input" data-time="08:00 PM" />
+            </div>
+
+            <div class="planner-row">
+              <span>10:00 PM</span>
+              <input type="text" class="planner-input" data-time="10:00 PM" />
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= POMODORO ================= -->
+
+        <section id="pomodoro" class="feature">
+          <h2>
+            <i class="fa-solid fa-clock"></i>
+
+            Pomodoro Timer
+          </h2>
+
+          <div class="timer-box">
+            <h1 id="timerDisplay">25:00</h1>
+
+            <div class="timer-buttons">
+              <button id="startTimer">Start</button>
+
+              <button id="pauseTimer">Pause</button>
+
+              <button id="resetTimer">Reset</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= WEATHER ================= -->
+
+        <section id="weather" class="feature">
+          <h2>
+            <i class="fa-solid fa-cloud-sun"></i>
+
+            Weather
+          </h2>
+
+          <div class="weather-card">
+            <h3 id="cityName">Hyderabad</h3>
+
+            <h1 id="temperature">--</h1>
+
+            <p id="weatherCondition">Loading...</p>
+
+            <div class="weather-info">
+              <div>
+                <h4>Humidity</h4>
+
+                <span id="humidity"> -- </span>
+              </div>
+
+              <div>
+                <h4>Wind</h4>
+
+                <span id="windSpeed"> -- </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= MOTIVATION ================= -->
+
+        <section id="quotes" class="feature">
+          <h2>
+            <i class="fa-solid fa-quote-left"></i>
+
+            Motivation Quote
+          </h2>
+
+          <div class="quote-box">
+            <p id="quote">Click the button to load a quote.</p>
+
+            <h4 id="author">—</h4>
+
+            <button id="newQuote">New Quote</button>
+          </div>
+        </section>
+
+        <!-- ================= DAILY GOALS ================= -->
+
+        <section id="goals" class="feature">
+          <h2>
+            <i class="fa-solid fa-bullseye"></i>
+
+            Daily Goals
+          </h2>
+
+          <div class="input-group">
+            <input type="text" id="goalInput" placeholder="Enter your goal" />
+
+            <button id="addGoal">Add Goal</button>
+          </div>
+
+          <ul id="goalList"></ul>
+
+          <div class="goal-progress">
+            <span id="goalProgress"> 0 / 0 Completed </span>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

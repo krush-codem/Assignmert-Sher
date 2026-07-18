@@ -1,0 +1,393 @@
+/* ======================================================
+   Productivity Dashboard - style.css
+   Author: ChatGPT
+   ====================================================== */
+
+:root {
+  --primary: #4f46e5;
+  --secondary: #06b6d4;
+  --bg: #eef2ff;
+  --card: rgba(255, 255, 255, 0.75);
+  --text: #1f2937;
+  --shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  --radius: 18px;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: rgba(30, 41, 59, 0.9);
+  --text: #f8fafc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  min-height: 100vh;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+.header {
+  width: min(1200px, 92%);
+  margin: auto;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-right {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.datetime {
+  text-align: right;
+}
+
+#themeToggle {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#dashboard {
+  width: min(1200px, 92%);
+  margin: 30px auto;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.dashboard-card {
+  background: var(--card);
+  backdrop-filter: blur(18px);
+  border-radius: var(--radius);
+  padding: 35px 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: var(--shadow);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.dashboard-card i {
+  font-size: 55px;
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+
+.dashboard-card h2 {
+  margin-bottom: 10px;
+}
+
+#featurePage {
+  display: none;
+  width: min(1100px, 92%);
+  margin: 30px auto;
+  background: var(--card);
+  backdrop-filter: blur(18px);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+#backBtn {
+  padding: 12px 22px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.feature {
+  display: none;
+}
+
+.feature.active {
+  display: block;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.input-group button,
+.timer-buttons button,
+#newQuote {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+}
+
+#todoList,
+#goalList {
+  list-style: none;
+}
+
+#todoList li,
+#goalList li {
+  background: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark #todoList li,
+body.dark #goalList li {
+  background: #1e293b;
+}
+
+.planner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.planner-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.planner-row input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.timer-box {
+  text-align: center;
+  padding: 40px 0;
+}
+
+#timerDisplay {
+  font-size: 72px;
+  margin: 20px 0;
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.weather-card,
+.quote-box {
+  text-align: center;
+  padding: 30px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+body.dark .weather-card,
+body.dark .quote-box {
+  background: #1e293b;
+}
+
+.weather-info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.goal-progress {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* ---------- Empty states ---------- */
+
+.empty-message {
+  text-align: center;
+  padding: 20px 0;
+  opacity: 0.6;
+}
+
+/* ---------- Todo item states ---------- */
+
+.todo-item {
+  flex-wrap: wrap;
+}
+
+.todo-item .todo-text {
+  text-align: left;
+  word-break: break-word;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.todo-item.important {
+  border-left: 4px solid #f59e0b;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.todo-actions button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+}
+
+/* ---------- Pomodoro extras ---------- */
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+body.dark .progress-container {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  transition: width 0.3s linear;
+}
+
+.session-counter {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+/* ---------- Planner: current hour highlight ---------- */
+
+.planner-row.current-hour {
+  background: rgba(79, 70, 229, 0.15);
+  border-radius: 8px;
+  padding: 6px 8px;
+}
+
+body.dark .planner-row.current-hour {
+  background: rgba(6, 182, 212, 0.18);
+}
+
+.clear-planner-btn {
+  margin-top: 10px;
+  align-self: flex-start;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+}
+
+/* ---------- Daily Goals ---------- */
+
+.goal-item .goal-text {
+  text-align: left;
+  word-break: break-word;
+}
+
+.goal-item.completed .goal-text {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.goal-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.goal-actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  font-size: 14px;
+}
+
+.goal-delete-btn {
+  background: #ef4444 !important;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .header-right {
+    flex-direction: column;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .timer-buttons {
+    flex-direction: column;
+  }
+
+  .planner-row {
+    grid-template-columns: 1fr;
+  }
+}
